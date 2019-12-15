@@ -1,18 +1,19 @@
 package javalearning;
-public class Abstracteg
+public class Abstracteg   // This porgram gives the example and information about Abstract class
 
 {
 	public static void main(String[] args)
 	{
-		Shape d =new Rectangle();
-	d.draw();
+		Shape d =new Rectangle();   // d object created 
+	d.draw();              // this will run the upadted draw function  i.e  of Rectangle class function  
 	Shape t=new triangle();
-	t.draw();
+	t.draw();   
 	
 	}
 	}
 
- abstract class Shape
+ abstract class Shape    // shape is an abstract class it that why  will  not contain the implementation of its function 
+	 		// function of abstact class are implictly abstact ...!
 {  abstract void draw();  }  
 
 
