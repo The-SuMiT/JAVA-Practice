@@ -11,7 +11,7 @@ public class Abstracteg   // This porgram gives the example and information abou
 	
 	}
 	}
-
+ 
  abstract class Shape    // shape is an abstract class it that why  will  not contain the implementation of its function 
 	 		// function of abstact class are implictly abstact ...!
 {  abstract void draw();  }  
