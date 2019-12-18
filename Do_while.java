@@ -4,15 +4,15 @@ public class Do_while
 
 {
   
-	public static void main(String[] args)
+	public static void main( String [] args)
 	{
 		int a=0;
 		
-		do{
+		do { 
 			a++;
-			System.out.println(a);
-		}
-		while(a<3);
+			system.out.println(a);
+		   }
+		while(a<13);
 	}
 	
 	
