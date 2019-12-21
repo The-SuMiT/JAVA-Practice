@@ -3,8 +3,7 @@ package javalearning;
 public class bubblesort
 
  	{
- 	
- 	
+ 	   	
  static void  bubbleSort(int[] arr)
 {
 	int temp;
@@ -24,6 +23,7 @@ public class bubblesort
 }
  
 
+	
 	public static void main(String[] args)
 		
 	{    
