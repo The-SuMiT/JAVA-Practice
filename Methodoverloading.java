@@ -3,11 +3,11 @@ package javalearning;
 
 public class Methodoverloading 
 /* 
-	Methodoverloading is simply passing  parameter with different datattypes
+	Methodoverloading is simply passing  parameter with different datatypes
 	
 In his section we r going to learn the how to create the multiple
    datatypes methods of same method name
-   thank you .....
+   thank you .....!
   */
 {
 
