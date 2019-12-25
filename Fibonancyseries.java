@@ -15,7 +15,7 @@ public class Fibonancyseries {
 		b=c;
 		
 	}
-		
+		   
 	}
 
 }
