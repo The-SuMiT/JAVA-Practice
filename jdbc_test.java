@@ -60,7 +60,7 @@ public static void main(String[] args)
 //Rem, after getting access to desired database  table the pointer is at 
 //0th position So , rs.next() will take us to 1st position
 //(where 1st value of table lies) . 
-
+ 
 	while(rs.next())	
 	{
 	String name = rs.getString("name");
