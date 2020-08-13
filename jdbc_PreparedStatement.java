@@ -4,7 +4,7 @@ import  java.sql.*;
 
 
 
-class PreparedStatement
+class jdbc_PreparedStatement
 {
 public static void main(String[] args)
 {
