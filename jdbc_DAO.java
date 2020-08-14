@@ -1,4 +1,5 @@
 import java.sql.*;
+//database name = temp 
 
 
 class jdbc_DAO 
@@ -23,6 +24,8 @@ public Game getGame(int id)
 	try
 	{
 	String query="select name from game where id="+id;
+	//table name = game,name = column name
+
 	Game s = new Game();
 	s.id=id;
 
