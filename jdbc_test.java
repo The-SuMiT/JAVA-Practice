@@ -32,7 +32,7 @@ public static void main(String[] args)
 // at 3306 port no & 3306 is default port no of mysql database
 // temp is database name in which we are going to work 
 
-
+ 
 
 
     String user      = "sumit";	//name of the localhost(current machine) user
