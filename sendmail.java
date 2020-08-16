@@ -7,7 +7,7 @@
 /*
 
 There are main 3 types of SMTP servers from which you can send mail 
-
+ 
 
 1.    Install and use any SMTP server such as Postcast server, Apache James server, cmail server etc.
 2.    Use the SMTP server provided by the host provider e.g. my SMTP server is mail.javatpoint.com
