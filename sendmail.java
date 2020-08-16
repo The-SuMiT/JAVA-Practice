@@ -2,7 +2,7 @@
    import javax.mail.*;    
    import javax.mail.internet.*;    
 
-//sending e-mail through Server of Gmail
+//sending e-mail through Server of Gmail to multiple users 
 
 /*
 
@@ -36,7 +36,7 @@ class Mailer
 {
 
 
-      public static void send(String from,String password,String to,String sub,String msg){  
+      public static void send(String from,String password,String to[],String sub,String msg){  
               //Get properties object    
               Properties props = new Properties();    
               props.put("mail.smtp.host", "smtp.gmail.com");    
@@ -49,7 +49,7 @@ class Mailer
 
 		//get Session   
               Session session = Session.getDefaultInstance(props,    
-               new javax.mail.Authenticator() {    
+               new javax.mail.Authenticator() {
                protected PasswordAuthentication getPasswordAuthentication() {    
                return new PasswordAuthentication(from,password);  
                }    
@@ -59,8 +59,15 @@ class Mailer
               //compose message    
               try {    
                MimeMessage message = new MimeMessage(session);    
-               message.addRecipient(Message.RecipientType.TO,new InternetAddress(to));
-               message.setSubject(sub);    
+ 
+	//sending mail to multiple Destinations
+		for(int i=0;i<to.length;i++)
+	      {
+		 message.addRecipient(Message.RecipientType.TO,new InternetAddress(to[i]));   
+	      }
+
+
+	       message.setSubject(sub);    
                message.setText(msg);    
                //send message  
                Transport.send(message);    
@@ -77,8 +84,11 @@ class Mailer
 {    
      public static void main(String[] args)
  {    
+	String[]  recipients={"recipient1@gmail.com","recipient2@gmail.com"};
+
          //pass parameters below with respective information to there name
-         Mailer.send("(sendermail-id)@gmail.com","(senders_password)","(receivermail-id)@gmail.com"," (Sub of mail) "," (Body of mail) ");  
+	//passing array of multiple destinations as parameter
+         Mailer.send("sender@gmail.com","passcode_of_sender",recipients,"sub. of mail  "," Body of mail  ");  
 
   }
 }
