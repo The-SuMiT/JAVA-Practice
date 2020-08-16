@@ -49,7 +49,7 @@ public static void main(String[] args)
 	 //forName method returns obj via its Static block which automatically invokes itself when class is declared.  
 	 //and instance block also can be invoke abv  by adding ".newInstance();" before ";".  
     	Connection con = DriverManager.getConnection(url, user, password);
-
+ 
 	 Statement st=con.createStatement();
 	ResultSet rs=st.executeQuery(query);	
 	//rs where query result is stored
