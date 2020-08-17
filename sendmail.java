@@ -36,7 +36,9 @@ class Mailer
 {
 
 
-      public static void send(String from,String password,String to[],String sub,String msg){  
+      public static void send(String from,String password,String to[],String sub,String msg)
+      
+  {  
               //Get properties object    
               Properties props = new Properties();    
               props.put("mail.smtp.host", "smtp.gmail.com");    
@@ -60,19 +62,21 @@ class Mailer
               try {    
                MimeMessage message = new MimeMessage(session);    
  
-	//sending mail to multiple Destinations
+	//sending mail to multiple recipients 
 		for(int i=0;i<to.length;i++)
-	      {
+	  {
 		 message.addRecipient(Message.RecipientType.TO,new InternetAddress(to[i]));   
-	      }
+	      
 
 
 	       message.setSubject(sub);    
                message.setText(msg);    
                //send message  
                Transport.send(message);    
-               System.out.println("message sent successfully");
-              } 
+               System.out.println("\n Message sent successfully : " + to[i]);
+             
+	}
+} 
 
 	catch (MessagingException e) {throw new RuntimeException(e);}
                  
@@ -88,7 +92,7 @@ class Mailer
 
          //pass parameters below with respective information to there name
 	//passing array of multiple destinations as parameter
-         Mailer.send("sender@gmail.com","passcode_of_sender",recipients,"sub. of mail  "," Body of mail  ");  
+         Mailer.send("sender@gmail.com","passcode_of_sender",recipients,"sub. of mail" , "Body of mail");  
 
   }
 }
